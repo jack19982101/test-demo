@@ -1,0 +1,19 @@
+{
+  "name": "study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@antv/g2": "^4.0.15",
+    "@antv/g2plot": "^2.0.1",
+    "@antv/g6": "^3.8.0",
+    "echarts": "^4.9.0"
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <svg width="800" height="800">
+        <!-- 矩形 -->
+        <rect width="50" height="50" style="fill: red; stroke-width: 1px; stroke: black;"></rect>
+        <!-- 线段 -->
+        <line x1="100" y1="100" x2="250" y2="75" style="stroke: blue; stroke-width: 2px;"></line>
+        <line x1="250" y1="75" x2="300" y2="100" style="stroke: blue; stroke-width: 1px;"></line>
+        <!-- 圆 -->
+        <circle cx="200" cy="200" r="50" fill="yellow" stroke="green" stroke-width="2"></circle>
+        <!-- 点 -->
+        <line x1="300" y1="300" x2="301" y2="301" style="stroke: blue; stroke-width: 2px;"></line>
+    </svg>
+
+    <script>
+        //canvas 不影响性能   放大会变虚
+        //svg    影响性能     放大不会变虚
+    </script>
+
+</body>
+</html>

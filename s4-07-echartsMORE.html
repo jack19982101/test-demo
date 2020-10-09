@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./node_modules/echarts/dist/echarts.js"></script>
+</head>
+<body>
+    <div id="chart" style="width: 800px; height: 400px;"></div>
+    <script>
+        const chartDom = document.getElementById('chart');
+        var chart = echarts.init(chartDom);
+        chart.setOption({
+            title:{text:"多坐标系"},
+            xAxis:{data:['1', '2', '3', '4']},
+            yAxis:{},
+            series:[
+                {type:'bar', data: [400,350,592,306]},
+                {type:'pie', center:['30%','20%'], radius:35,
+                    data: [
+                        {name:"1", value:50},
+                        {name:"2", value:10},
+                        {name:"3", value:20},
+                        {name:"4", value:10}
+                    ]
+                },
+                {type: 'line', data:[100,112,96,123]}
+            ]
+        });
+    </script>
+</body>
+</html>

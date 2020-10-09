@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./node_modules/echarts/dist/echarts.js"></script>
+</head>
+<body>
+    <div id="chart" style="width: 800px; height: 400px;"></div>
+    <script>
+        const chartDom = document.getElementById('chart');
+        var chart = echarts.init(chartDom);
+        chart.setOption({
+            dataset:{
+                source:[
+                    ['一季度', 400, 123, '分类1', 50],
+                    ['二季度', 350, 345, '分类2', 10],
+                    ['三季度', 592, 231, '分类3', 20],
+                    ['四季度', 306, 297, '分类4', 10],
+                ]
+            },
+            title:{text:"多坐标系", subtext:"jack"},
+            xAxis:{data:['一季度', '二季度', '三季度', '四季度']},
+            yAxis:{},
+            //图例
+            legend:{data:[{name:'分类', icon:'circle', textStyle:{color:'red'}}, '折线图', '柱状图'], right:130},
+            //按钮工具
+            toolbox:{feature:{dataZoom:{yAxisIndex:false}, restore:{}, saveAsImage:{}}},
+            //下方选择条
+            dataZoom:[{show:true, start:0, end:100}],
+            series:[
+                {name:'柱状图', type:'bar', encode:{x:0, y:1}},
+                {name:'分类', type:'pie', center:['30%','20%'], radius:35, encode:{itemName:3, value:4}},
+                {name:'折线图', type: 'line', encode:{x:0, y:2}}
+            ]
+        });
+    </script>
+</body>
+</html>

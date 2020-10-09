@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./node_modules/echarts/dist/echarts.js"></script>
+</head>
+<body>
+    <div id="chart" style="width: 800px; height: 400px;"></div>
+    <script>
+        const chartDom = document.getElementById('chart');
+        var chart = echarts.init(chartDom);
+        chart.setOption({
+            dataset:{
+                source:[
+                    ['一季度', 400, 123, '分类1', 50],
+                    ['二季度', 350, 345, '分类2', 10],
+                    ['三季度', 592, 231, '分类3', 20],
+                    ['四季度', 306, 297, '分类4', 10],
+                ]
+            },
+            title:{text:"多坐标系"},
+            xAxis:{data:['一季度', '二季度', '三季度', '四季度']},
+            yAxis:{},
+            series:[
+                {type:'bar', encode:{x:0, y:1}},
+                {type:'pie', center:['30%','20%'], radius:35, encode:{itemName:3, value:4}},
+                {type: 'line', encode:{x:0, y:2}}
+            ]
+        });
+    </script>
+</body>
+</html>

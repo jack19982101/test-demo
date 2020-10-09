@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="g6chart"></div>
+    <script src="node_modules/@antv/g6/dist/g6.min.js"></script>
+    <script>
+        const data = {
+            nodes:[
+                {id:'node1', x:100, y:200, label:'起始点', size:60},
+                {id:'node2', x:300, y:200, label:'目标点1', size:80}
+                //{id:'node3', x:500, y:200, label:'终点', size:100}
+            ]
+        };
+
+        console.log(G6);
+
+        // 创建 G6 图实例
+        const graph = new G6.Graph({
+            container: 'g6chart', // 指定图画布的容器 id，与第 9 行的容器对应
+            // 画布宽高
+            width: 800,
+            height: 500,
+        });
+
+        console.log(graph);
+
+
+        // 读取数据
+        graph.data(data);
+        // 渲染图
+        graph.render();
+
+    </script>
+</body>
+</html>

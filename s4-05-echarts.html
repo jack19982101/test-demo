@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./node_modules/echarts/dist/echarts.js"></script>
+</head>
+<body>
+    <div id="chart" style="width: 800px; height: 400px;"></div>
+    <script>
+        const chartDom = document.getElementById('chart');
+        const chart = echarts.init(chartDom);
+        chart.setOption({
+            title:{text:"biaotibiiaoti"},
+            xAxis:{data:['shipin', 'shuma', 'fushi', 'xiangbao']},
+            yAxis:{},
+            series:{type:'bar', data: [400,350,592,306]},
+
+        });
+    </script>
+</body>
+</html>
